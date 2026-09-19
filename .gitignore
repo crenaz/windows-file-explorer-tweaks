@@ -1,0 +1,23 @@
+# Windows File Explorer Tweaks - Local State & Artifacts
+
+# Automated pre-flight registry backups
+.backups/
+*.reg.bak
+
+# Local state tracking & manifests
+.state/
+
+# Windows Explorer artifacts
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.log

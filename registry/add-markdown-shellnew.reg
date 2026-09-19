@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; ==============================================================================
+; Windows File Explorer Tweak: Add "Text Document (Markdown)" to New Menu
+; Tweak Domain : context-menu
+; Menu Item    : Text Document (Markdown)
+; Extension    : .md
+; ==============================================================================
+
+[HKEY_CLASSES_ROOT\.md]
+@="MarkdownDocument"
+"Content Type"="text/markdown"
+"PerceivedType"="text"
+
+[HKEY_CLASSES_ROOT\.md\ShellNew]
+"NullFile"=""
+
+[HKEY_CLASSES_ROOT\MarkdownDocument]
+@="Text Document (Markdown)"
+
+[HKEY_CLASSES_ROOT\MarkdownDocument\DefaultIcon]
+@="%SystemRoot%\\System32\\imageres.dll,-102"

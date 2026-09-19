@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; ==============================================================================
+; Windows File Explorer Tweak: Remove "Text Document (Markdown)" from New Menu
+; Tweak Domain : context-menu
+; Description  : Rollback script - removes ShellNew template and MarkdownDocument ProgID
+; ==============================================================================
+
+[-HKEY_CLASSES_ROOT\.md\ShellNew]
+
+[-HKEY_CLASSES_ROOT\MarkdownDocument]
