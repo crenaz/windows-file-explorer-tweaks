@@ -1,11 +1,10 @@
 <#
 .SYNOPSIS
-    Adds "Text Document (Markdown)" to the Windows File Explorer "New" context menu.
+    Adds "Markdown Document" to the Windows File Explorer "New" context menu.
 
 .DESCRIPTION
     Configures HKEY_CLASSES_ROOT for .md files to include a ShellNew subkey.
-    Uses display name "Text Document (Markdown)" to position the entry alphabetically
-    adjacent to "Text Document".
+    Uses display name "Markdown Document" for a clean, native entry in the New submenu.
     Performs automated pre-flight registry backups before making changes.
 
 .PARAMETER RestartExplorer
@@ -63,7 +62,7 @@ if (Get-Command Confirm-AdminPrivilege -ErrorAction SilentlyContinue) {
     }
 }
 
-Write-Host "==> Applying 'Text Document (Markdown)' Explorer New Menu Tweak..." -ForegroundColor Cyan
+Write-Host "==> Applying 'Markdown Document' Explorer New Menu Tweak..." -ForegroundColor Cyan
 
 $mdPath = "Registry::HKEY_CLASSES_ROOT\.md"
 $shellNewPath = "$mdPath\ShellNew"
@@ -109,7 +108,7 @@ try {
     if (-not (Test-Path -Path $progIdPath)) {
         New-Item -Path $progIdPath -Force | Out-Null
     }
-    Set-ItemProperty -Path $progIdPath -Name "(Default)" -Value "Text Document (Markdown)" -Force
+    Set-ItemProperty -Path $progIdPath -Name "(Default)" -Value "Markdown Document" -Force
 
     # 8. Configure Default Icon
     Write-Host "    Configuring icon..." -ForegroundColor Gray
@@ -121,7 +120,7 @@ try {
     # 9. Register in State Manifest
     if (Get-Command Register-TweakState -ErrorAction SilentlyContinue) {
         Register-TweakState -TweakId "context-menu.new-markdown-document" `
-                            -TweakName "Text Document (Markdown) New Menu" `
+                            -TweakName "Markdown Document New Menu" `
                             -ModifiedKeys @("HKCR\.md", "HKCR\.md\ShellNew", "HKCR\MarkdownDocument") `
                             -BackupFiles $backupFiles
     }
@@ -145,8 +144,8 @@ try {
         }
     }
 
-    Write-Host "[OK] Successfully installed 'Text Document (Markdown)' into Explorer New menu!" -ForegroundColor Green
-    Write-Host "    Right-click in File Explorer -> New -> 'Text Document (Markdown)'." -ForegroundColor Gray
+    Write-Host "[OK] Successfully installed 'Markdown Document' into Explorer New menu!" -ForegroundColor Green
+    Write-Host "    Right-click in File Explorer -> New -> 'Markdown Document'." -ForegroundColor Gray
 }
 catch {
     Write-Error "Failed to apply registry changes: $_"

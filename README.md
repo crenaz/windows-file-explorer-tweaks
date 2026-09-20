@@ -4,14 +4,14 @@ A modular, non-destructive collection of Windows File Explorer customizations, c
 
 ---
 
-## Featured Tweak: "Text Document (Markdown)" in New Menu
+## Featured Tweak: "Markdown Document" in New Menu
 
 Adds a blank Markdown (`.md`) template to the File Explorer right-click **New** menu.
 
-### Why "Text Document (Markdown)"?
-Windows File Explorer sorts items in the **New** submenu alphabetically based on their display name.
-- If named *"Markdown Document"*, Windows places it between *"Bitmap image"* and *"Microsoft Access Database"*.
-- By naming it **"Text Document (Markdown)"**, the item naturally groups directly adjacent to Windows' native **"Text Document"** under the `T` section.
+### Menu Placement & Extension Sorting
+In Windows 11, File Explorer sorts items in the **New** submenu alphabetically by file extension (`.md`).
+- Because `.md` starts with `m`, the entry is cleanly positioned between `.docx` (*Microsoft Word*) and `.odg` (*OpenDocument Drawing*).
+- Selecting **Markdown Document** creates a clean, empty `.md` file immediately in your current folder or desktop.
 
 ---
 

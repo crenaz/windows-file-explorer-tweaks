@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Removes "Text Document (Markdown)" from the Windows File Explorer "New" context menu.
+    Removes "Markdown Document" from the Windows File Explorer "New" context menu.
 
 .DESCRIPTION
     Safely removes the ShellNew subkey under HKEY_CLASSES_ROOT\.md and cleans up
@@ -62,7 +62,7 @@ if (Get-Command Confirm-AdminPrivilege -ErrorAction SilentlyContinue) {
     }
 }
 
-Write-Host "==> Reverting 'Text Document (Markdown)' Explorer New Menu Tweak..." -ForegroundColor Cyan
+Write-Host "==> Reverting 'Markdown Document' Explorer New Menu Tweak..." -ForegroundColor Cyan
 
 $mdPath = "Registry::HKEY_CLASSES_ROOT\.md"
 $shellNewPath = "$mdPath\ShellNew"
@@ -121,7 +121,7 @@ try {
         }
     }
 
-    Write-Host "[OK] Successfully removed 'Text Document (Markdown)' from Explorer New menu." -ForegroundColor Green
+    Write-Host "[OK] Successfully removed 'Markdown Document' from Explorer New menu." -ForegroundColor Green
 }
 catch {
     Write-Error "Failed to revert registry changes: $_"

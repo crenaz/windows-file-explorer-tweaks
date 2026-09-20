@@ -1,11 +1,10 @@
-﻿# New Markdown Document Tweak
+# New Markdown Document Tweak
 
-Adds a **Text Document (Markdown)** template entry to the Windows File Explorer right-click **New** context menu, allowing you to instantly create blank `.md` files.
+Adds a **Markdown Document** template entry to the Windows File Explorer right-click **New** context menu, allowing you to instantly create blank `.md` files.
 
 ## Menu Placement
 
-Windows File Explorer automatically sorts items in the **New** submenu alphabetically according to their display string.
-- By using the display name `Text Document (Markdown)`, this item is positioned directly adjacent to Windows' native `Text Document` entry.
+In Windows 11, File Explorer sorts items in the **New** submenu alphabetically by file extension (`.md`), positioning it cleanly between `.docx` (Microsoft Word) and `.odg` (OpenDocument Drawing).
 
 ## Files
 
